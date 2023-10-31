@@ -1,0 +1,15 @@
+<h1 class="title">{{title}}</h1>
+<div class="btn">
+<button (click) = "toggleTable()">Show/Hide Experience</button>
+</div>
+<div *ngIf="viewTable">
+  <body>
+    <div class="company" *ngFor = "let contact of experienceList">
+      <div class="one">{{contact.companyName}}</div>
+      <br>
+      <div class="two">{{contact.jobTitle}}</div>
+      <br>
+      <div class="three">{{contact.description}}</div>
+    </div>
+  </body>
+</div>
